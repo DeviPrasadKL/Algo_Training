@@ -35,9 +35,9 @@ app.post('/submit', async (req, res) => {
   }
 });
 
-// Schedule a cron job to run at 9:00 AM every day
-cron.schedule('0 9 * * *', () => {
-  console.log('Cron job executed at 9:00 AM');
+// Schedule a second cron job to run at 10:10 AM every day
+cron.schedule('10 10 * * *', () => {
+  console.error('Cron job executed at 10:10 AM');
 });
 
 app.listen(port, () => {
